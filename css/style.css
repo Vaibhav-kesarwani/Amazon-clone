@@ -187,7 +187,7 @@ nav {
 
 .product-slider .products img {
   max-width: 200px;
-  max-height: 200;
+  max-height: 200px;
   object-fit: contain;
   cursor: pointer;
 }
@@ -255,10 +255,10 @@ nav {
 }
 
 footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #fff;
-    background: #131921;
-    padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  background: #131921;
+  padding: 20px 60px;
 }

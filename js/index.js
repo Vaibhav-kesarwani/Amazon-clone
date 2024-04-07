@@ -6,38 +6,38 @@ const scrollContainer = document.querySelectorAll(".products");
 let index = 0;
 
 function changeSlide() {
-    for (let i = 0; i < imgs.length; i++) {
-        imgs[i].style.display = "none";
-    }
+  for (let i = 0; i < imgs.length; i++) {
+    imgs[i].style.display = "none";
+  }
 
-    imgs[index].style.display = "block";
+  imgs[index].style.display = "block";
 }
 
 changeSlide();
 
 prev.addEventListener("click", (e) => {
-    if (index > 0) {
-        index--;
-    } else {
-        index = imgs.length - 1;
-    }
+  if (index > 0) {
+    index--;
+  } else {
+    index = imgs.length - 1;
+  }
 
-    changeSlide();
+  changeSlide();
 });
 
 next.addEventListener("click", (e) => {
-    if (index < imgs.length - 1) {
-        index++;
-    } else {
-        index = 0;
-    }
+  if (index < imgs.length - 1) {
+    index++;
+  } else {
+    index = 0;
+  }
 
-    changeSlide();
+  changeSlide();
 });
 
 for (const item of scrollContainer) {
-    item.addEventListener("wheel", (e) => {
-        e.preventDefault();
-        item.scrollLeft += e.deltaY
-    });
+  item.addEventListener("wheel", (e) => {
+    e.preventDefault();
+    item.scrollLeft += e.deltaY;
+  });
 }
