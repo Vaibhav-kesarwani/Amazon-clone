@@ -1,6 +1,8 @@
 const imgs = document.querySelectorAll(".header-slider ul img");
 const prev = document.querySelector(".control_prev");
 const next = document.querySelector(".control_next");
+const scrollContainer = document.querySelectorAll(".products");
+
 let index = 0;
 
 function changeSlide() {
@@ -32,3 +34,10 @@ next.addEventListener("click", (e) => {
 
     changeSlide();
 });
+
+for (const item of scrollContainer) {
+    item.addEventListener("wheel", (e) => {
+        e.preventDefault();
+        item.scrollLeft += e.deltaY
+    });
+}
